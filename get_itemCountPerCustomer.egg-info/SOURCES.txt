@@ -1,0 +1,7 @@
+get_itemCountPerCustomer/__init__.py
+get_itemCountPerCustomer/__main__.py
+get_itemCountPerCustomer.egg-info/PKG-INFO
+get_itemCountPerCustomer.egg-info/SOURCES.txt
+get_itemCountPerCustomer.egg-info/dependency_links.txt
+get_itemCountPerCustomer.egg-info/entry_points.txt
+get_itemCountPerCustomer.egg-info/top_level.txt

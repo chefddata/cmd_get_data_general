@@ -1,0 +1,3 @@
+[console_scripts]
+get_itemCountPerCustomer = get_itemCountPerCustomer.__main__:main
+

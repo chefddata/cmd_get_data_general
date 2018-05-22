@@ -1,0 +1,12 @@
+# Installation
+1) Download the repo
+2) go inside the directory location
+3) run pip install -e.
+
+# How to run:
+After the installation, just call the command: get_itemCountPerCustomer
+
+# NOTE:
+Change the google authentication json
+
+Uploading my json, if using this the please copy the file in Downloads fold and edit '/Users/USERNAME/Downloads/Data Warehouse Production-7bb7eb3af064.json' in th main.py

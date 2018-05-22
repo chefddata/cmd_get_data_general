@@ -18,7 +18,7 @@ def main():
     job_config.use_legacy_sql = False
     print('loading data from BigQuery: Cusomer Shopify ID | Item Shopify ID | Count of Item')
 
-    query = "SELECT a.customer_shopify_id, b.shopify_product_id, count(b.shopify_product_id) FROM (SELECT tl_item_id, customer_shopify_id FROM `tetris-effect-203015.EDW_Netsuite.Transactions` WHERE partition_key > CAST('2015-08-01' AS DATE)) a JOIN `tetris-effect-203015.EDW_Netsuite.Items` b ON a.tl_item_id = b.item_id group by a.customer_shopify_id, b.shopify_product_id"
+    query = "SELECT t.customer_shopify_id , i.shopify_product_id, count(*) FROM `tetris-effect-203015.EDW_Netsuite.Transactions` t, `tetris-effect-203015.EDW_Netsuite.Items` i WHERE t.transaction_type = 'Sales Order' and t.status != 'Closed' and t.partition_key > CAST('2015-08-01' AS DATE) and i.item_id = t.tl_item_id GROUP BY t.customer_shopify_id , i.shopify_product_id "
 
     df = client.query(
     query,
